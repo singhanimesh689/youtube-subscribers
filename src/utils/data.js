@@ -10,6 +10,10 @@ const data = [
     {
       "name": "Lucifer",
       "subscribedChannel": "Sentex"
+    },
+    {
+      "name": "Animesh",
+      "subscribedChannel": "fun"
     }
   ]
 

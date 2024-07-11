@@ -28,7 +28,9 @@ This Express API provides endpoints to manage subscribers. It includes functiona
     ```
 
 3. **Set up environment variables:**
-    Install mongodb in your local machine
+    Create a `.env` file in the root of your project and add your MongoDB URL:
+    ```plaintext
+    MONGODB_URL="your atlas connection string"
 
 4. **Run the server:**
     ```bash
