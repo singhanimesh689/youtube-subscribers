@@ -1,5 +1,8 @@
 const subscriberModel = require("../models/subscribers");
 
+exports.getHome = (req,res,next)=>{
+    res.render('index', { title: 'YOUTUBE SUBSCRIBERS' });
+}
 //async function to get subscribers
 exports.getSubscribers = async (req, res , next)=>{
     try {
@@ -19,6 +22,7 @@ exports.getSubscribersWithName = async (req,res,next)=>{
         next(error);
     }   
 }
+
 
 //async function to get subcribers with an id
 exports.getSubscriberWithId = async (req,res,next)=>{

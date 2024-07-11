@@ -1,0 +1,37 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center;height: 100vh;">
+        <div style="display: flex;flex-direction: column; justify-content: center; align-items: center;background-color: black;width: 40vw;color: white;border-radius: 20px;">
+            <h1 style="text-decoration: underline;font-size: 40px;"><%= title %></h1>
+            <div style="padding: 10px;margin: 10px;text-align: center;font-size: 25px;">The YouTube-subscribers project is a Node.js application designed to manage and track subscribers of various YouTube channels. It leverages MongoDB for data storage and utilizes Express.js for handling HTTP requests and responses.</div>
+            <div style="font-size: 30px;">To get all subscribers</div>
+            <a href="/subscribers" style="border-width: 2px;border-color: white;border-style:outset; text-decoration: none;color: red; cursor: pointer;font-size: 30px;padding: 5px;margin: 5px;margin-bottom: 20px;">/subscribers</a>
+            <div style="font-size: 30px;">To get subscribers with names and subscribed channel</div>
+            <a href="/subscribers/names" style="border-width: 2px;border-color: white;border-style:outset; text-decoration: none;color: red; cursor: pointer;font-size: 30px;padding: 5px;margin: 5px;margin-bottom: 20px;">/subscribers/names</a>
+            <div style="font-size: 30px;">To get subscriber with id</div>
+            <form id="myForm" style="margin-bottom: 25px;margin-top: 10px;">
+                <input placeholder="Enter the id" type="text" id="inputValue" name="inputValue" required style="width: 200px; height : 30px;font-size: 25px;cursor: pointer;">
+                <button type="submit" style="width: 90px;font-size: 25px;cursor: pointer;">Submit</button>
+            </form>
+            <script>
+                document.getElementById('myForm').addEventListener('submit', function(event) {
+                    event.preventDefault(); 
+        
+                    const inputValue = document.getElementById('inputValue').value;
+                    const baseUrl = '/subscribers'; 
+        
+                    window.location.href = `${baseUrl}/${encodeURIComponent(inputValue)}`;
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>

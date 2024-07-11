@@ -1,6 +1,8 @@
 const router = require("express").Router();
-const {getSubscribers,getSubscribersWithName,getSubscriberWithId,getError} = require("../controllers/getSubscribers")
+const {getSubscribers,getSubscribersWithName,getSubscriberWithId,getError,getHome} = require("../controllers/getSubscribers")
 
+
+router.get("/",getHome)
 //route to get all subscribers
 router.get("/subscribers",getSubscribers);
 
