@@ -1,8 +1,8 @@
 // test/subscriberController.test.js
 const request = require('supertest');
 const { expect } = require('chai');
-const subscriberController = require('../src/controllers/getSubscribers');
-const subscriberModel = require('../src/models/subscribers');
+const subscriberController = require('../controllers/getSubscribers');
+const subscriberModel = require('../models/subscribers');
 const express = require('express');
 const bodyParser = require('body-parser');
 require('./setup');
